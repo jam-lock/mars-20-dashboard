@@ -1,0 +1,198 @@
+.info-panel {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    min-width: 480px;
+    width: 50%;
+    min-width: 720px;
+    height: 100vh;
+    z-index: 1000;
+    background-color: rgba(20, 20, 20, 0.8);
+    overflow-y: hidden;
+    box-shadow: -3px 0 4px 0 rgba(0, 0, 0, 0.5);
+}
+
+.info-panel .panel-header {
+    width: 100%;
+    position: relative;
+}
+
+.info-panel .panel-body {
+    overflow-y: auto;
+    width: 100%;
+    margin-top: 6rem;
+}
+
+.info-panel .close-info-panel {
+    position: absolute;
+    top: 50%;
+    right: 1.5rem;
+    transform: translateY(-50%);
+}
+
+.info-panel h1.ant-typography {
+    color: white;
+    margin: 1rem 0;
+    margin-right: 1rem;
+    width: 100%;
+    text-align: center;
+}
+
+.info-panel article.ant-typography {
+    color: white;
+}
+
+.info-panel .close-info-panel .ant-btn-icon-only {
+    padding: 0;
+}
+
+.info-panel .tabs {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.info-panel .tab-body {
+    overflow-y: auto;
+    width: 100%;
+    padding: 0 1rem 1rem 1rem;
+}
+
+.info-panel .tabs .tabs-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 6rem;
+    padding: 1.5rem;
+    position: absolute;
+    top: 6rem;
+    left: 6rem;
+    right: 6rem;
+}
+
+.info-panel .tabs .tabs-header button.ant-btn {
+    width: 100%;
+    border-radius: 0;
+    height: 100%;
+    border-right: 0;
+    border-left: 0;
+    border-top: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.info-panel .tabs .tabs-header button.ant-btn.ant-btn.ant-btn-primary {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #333333;
+    border-bottom: 1px solid white;
+}
+
+.info-panel .tabs .tabs-header button.ant-btn:hover {
+    border-bottom: 1px solid white;
+}
+
+.info-panel .tabs .tabs-header .ant-btn.ant-btn-default {
+    background-color: transparent;
+    color: white;
+}
+
+.info-panel h2.ant-typography {
+    color: white;
+    font-size: 1rem;
+}
+
+.info-panel .ant-collapse,
+.info-panel .ant-collapse .ant-collapse-content {
+    background-color: transparent;
+}
+
+.info-panel .ant-tabs-tab-btn {
+    color: white;
+}
+
+.info-panel .ant-collapse .ant-collapse-header,
+.info-panel .ant-collapse .ant-collapse-header span {
+    color: white !important
+}
+
+.info-panel .ant-tabs-content-holder {
+    width: 100%;
+}
+
+.info-panel .cam-images {
+    border-bottom: 1px solid grey;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+}
+
+.info-panel .cam-images:last-child {
+    border-bottom: unset;
+    margin-bottom: 0.5rem;
+    padding-bottom: 0;
+}
+
+.info-panel .cam-images article.ant-typography {
+    color: white;
+    margin-left: 1rem;
+}
+
+.info-panel .cam-images .image {
+    height: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: unset;
+    background-color: rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+}
+
+.info-panel .cam-images .image img {
+    object-fit: contain;
+}
+
+.info-panel .cam-images .image .ant-card-body {
+    padding: 6px 0 0 0;
+}
+
+.ant-image-preview-root .ant-image-preview-switch-right,
+.ant-image-preview-root .ant-image-preview-switch-left {
+    background-color: #f0f0f0;
+    color: black;
+}
+
+.info-panel .cam-images .image-loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(20, 20, 20, 0.8)
+}
+
+.info-panel .cam-images .image-loading i {
+    background-color: white;
+}
+
+.info-panel .data-charts h3.ant-typography {
+    color: white;
+    font-size: 1.25rem;
+    margin: 1rem 0 0 0;
+}
+
+.info-panel .gif {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.info-panel .gif img {
+    margin: auto;
+}

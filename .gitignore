@@ -80,3 +80,4 @@ backend/venv/
 
 # VS Code
 .vscode
+*.code-workspace
