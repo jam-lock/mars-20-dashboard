@@ -76,7 +76,11 @@ typings/
 .fusebox/
 
 # backend
+backend/data/gifs
+backend/data/gif-images
+backend/data/*.json
 backend/venv/
+*.pyc
 
 # VS Code
 .vscode
