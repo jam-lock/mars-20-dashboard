@@ -117,7 +117,7 @@ const Home: FC = () => {
   })
 
   return (
-    <Container>
+    <div className="homepage">
       {loading && <Loading />}
       <MapContainer
         center={[18.435, 77.45]} zoom={16}
@@ -205,7 +205,7 @@ const Home: FC = () => {
           closeInfoPanel={() => setSelectors({})}
         />
       }
-    </Container>
+    </div>
   )
 }
 
