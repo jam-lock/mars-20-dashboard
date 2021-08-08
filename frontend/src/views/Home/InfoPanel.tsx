@@ -10,6 +10,7 @@ import { Feature, GeoJsonProperties } from 'geojson';
 import Loading from '../../components/UI/Loading'
 import ReactECharts from 'echarts-for-react';
 import { FeatureCollection } from 'geojson'
+import { PlusOutlined } from '@ant-design/icons';
 
 const { Panel } = Collapse;
 const { Title } = Typography;
@@ -72,7 +73,7 @@ const CamImages: FC<CamImagesProps> = (props: CamImagesProps) => {
           props.images.length > 0 && props.images.length <= maxImages ?
             props.images.map(
               (image: string, index: number) =>
-                <Col key={index} span={3}>
+                <Col key={index} span={6} md={3} >
                   <Card className="image">
                     <Image
                       src={image}
@@ -88,7 +89,7 @@ const CamImages: FC<CamImagesProps> = (props: CamImagesProps) => {
               <React.Fragment>
                 {props.images.filter((image, index) => index < maxImages).map(
                   (image: string, index: number) =>
-                    <Col key={index} span={3}>
+                    <Col key={index} span={6} md={3}>
                       <Card className="image">
                         <Image
                           src={image}
@@ -101,9 +102,13 @@ const CamImages: FC<CamImagesProps> = (props: CamImagesProps) => {
                       </Card>
                     </Col>
                 )}
-                <Col span={3}>
+                <Col span={6} md={3}>
                   <Card className="image">
-                    <Button onClick={() => setMaxImages(maxImages + batchSize + 1)}>Load more</Button>
+                    <Button
+                      onClick={() => setMaxImages(maxImages + batchSize + 1)}
+                      shape="circle"
+                      icon={<PlusOutlined />}
+                    />
                   </Card>
                 </Col>
               </React.Fragment>

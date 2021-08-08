@@ -7,7 +7,6 @@
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
-    min-width: 480px;
     width: 50%;
     min-width: 720px;
     height: 100vh;
@@ -24,6 +23,7 @@
 
 .info-panel .panel-body {
     overflow-y: auto;
+    overflow-x: hidden;
     width: 100%;
     margin-top: 6rem;
 }
@@ -195,4 +195,19 @@
 
 .info-panel .gif img {
     margin: auto;
+}
+
+@media screen and (max-width: 768px) {
+    .info-panel {
+        min-width: 480px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .info-panel {
+        min-width: 320px;
+    }
+    .info-panel .cam-images .image {
+        height: 4rem;
+    }
 }
