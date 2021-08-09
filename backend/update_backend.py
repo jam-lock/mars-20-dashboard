@@ -33,7 +33,7 @@ def main():
     gif_creator.run()
 
     print("Uploading files to server")
-    ftp = ftplib.FTP('ftp.filipelimberger.com', 'filipelimberger', 'JARBAS6465')
+    ftp = ftplib.FTP(os.getenv("HOSTNAME"), os.getenv("USERNAME"), os.getenv("PASSWORD"))
     os.chdir('data')
     for filename in GEOJSON_FILES:
         with open(filename, "rb") as file:
