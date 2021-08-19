@@ -11,7 +11,7 @@ GEOJSON_FILES = (
     'ingenuity-waypoints.json',
     'ingenuity-path.json'
 )
-GIFS_PATH = 'gifs'
+GIFS_PATH = 'gifs/'
 
 def main():
     load_dotenv()
@@ -41,7 +41,7 @@ def main():
     saved_gifs = ftp.nlst('mars-20/api/gifs')
     for filename in os.listdir(GIFS_PATH):
         if 'mars-20/api/gifs/' + filename not in saved_gifs:
-            with open(filename, "rb") as file:
+            with open(GIFS_PATH + filename, "rb") as file:
                 ftp.storbinary(f"STOR mars-20/api/gifs/{filename}", file)
     ftp.quit()
     

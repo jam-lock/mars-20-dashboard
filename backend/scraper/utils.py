@@ -208,9 +208,13 @@ class GeoJsonParser():
         self.save(self.perseverance_waypoints, 'data/perseverance-waypoints.json')
 
     def parse_perseverance_path(self):
-        for feature in self.perseverance_path['features']:
+        for index, feature in enumerate(self.perseverance_path['features']):
             from_rmc = feature['properties']['fromRMC']
+            if not from_rmc:
+                from_rmc = self.perseverance_path['features'][index - 1]['properties']['toRMC']
             to_rmc = feature['properties']['toRMC']
+            if not to_rmc:
+                to_rmc = self.perseverance_path['features'][index + 1]['properties']['fromRMC']
             init_sol, end_sol = self.get_sol_range_from_rmc(from_rmc, to_rmc)
             sol_images = self.get_agg_sol_images(init_sol, end_sol)
             vehicle_sol_images = self.filter_vehicle_images('perseverance', sol_images)
